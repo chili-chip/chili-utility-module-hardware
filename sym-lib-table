@@ -1,0 +1,4 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "chili-utility-module") (type "KiCad") (uri "${KIPRJMOD}/chili-utility-module.kicad_sym") (options "") (descr "Utility module parts: IMU, RTC, haptic driver, ERM motor"))
+)
