@@ -4,6 +4,14 @@ KiCad 10 project for the **chilichip utility module**: a small add-on board for 
 
 Status: **schematic and PCB done.** The board is routed, DRC is clean (0 violations, 0 unconnected, matches the schematic), and ERC is clean.
 
+<p align="center">
+  <img src="docs/images/iso.png" alt="Rendered 3D view of the utility module" width="560">
+</p>
+
+| Top | Bottom |
+|:---:|:---:|
+| <img src="docs/images/top.png" alt="Top side render" width="360"> | <img src="docs/images/bottom.png" alt="Bottom side render" width="360"> |
+
 ## Parts
 
 | Ref | Function | Part | LCSC |
@@ -109,4 +117,5 @@ CI runs ERC, DRC and the export on every push and pull request. A `v*` tag publi
 | `3d-models/` | STEP models for BT1, M1 and U2 |
 | `chili-utility-module.kicad_pcb` | PCB |
 | `scripts/export-jlcpcb.sh` | Builds the JLCPCB gerber zip, BOM and CPL |
+| `scripts/render-images.sh` | Regenerates the renders in `docs/images/` |
 | `.github/workflows/main.yml` | CI and release workflow |
