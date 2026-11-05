@@ -53,7 +53,7 @@ GP0/GP1 are also the RP2350's default UART0 pins, so with this module fitted, us
 
 ## ERC
 
-ERC is clean. The project's `LSM6DS3TR-C` symbol has three pin types adjusted from KiCad's original, all matching how this design uses them:
+ERC is clean. The project's `LSM6DS3TR-C` symbol has four pin types adjusted from KiCad's original, all matching how this design uses them:
 - INT1/INT2 are open-collector, because firmware always sets them to open-drain so they can share the INT line with the RTC.
 - SDO/SA0 and SDx are passive, because they're tied to GND: SA0 as an address strap, SDx as the unused auxiliary I²C master.
 
