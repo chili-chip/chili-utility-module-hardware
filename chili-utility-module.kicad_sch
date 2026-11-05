@@ -7,7 +7,7 @@
 	(title_block
 		(title "CHILICHIP UTILITY MODULE")
 		(date "2026-11-05")
-		(rev "v0.1.0")
+		(rev "v1.0.0")
 		(comment 3 "Company: chilichip")
 		(comment 4 "Author: Kacper Akdag-Ochnik")
 	)

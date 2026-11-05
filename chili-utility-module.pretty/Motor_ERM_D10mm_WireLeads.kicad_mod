@@ -158,7 +158,7 @@
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/3d-models/Motor_ERM_LEADER_LCM1027A2445F.step"
 		(offset
-			(xyz 0 0 0)
+			(xyz 0 0 1.7)
 		)
 		(scale
 			(xyz 1 1 1)

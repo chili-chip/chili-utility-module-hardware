@@ -9,7 +9,7 @@
 	(paper "A4")
 	(title_block
 		(title "CHILICHIP UTILITY MODULE")
-		(rev "v0.1.0")
+		(rev "v1.0.0")
 		(comment 3 "Company: chilichip")
 		(comment 4 "Author: Kacper Akdag-Ochnik")
 	)
@@ -2689,13 +2689,13 @@
 		(embedded_fonts no)
 		(model "${KIPRJMOD}/3d-models/BatteryHolder_MYOUNG_MY-1220-03.step"
 			(offset
-				(xyz 0 0 0)
+				(xyz 0 0 3.1)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -0 -0 -0)
 			)
 		)
 	)
@@ -3456,13 +3456,13 @@
 		(embedded_fonts no)
 		(model "${KIPRJMOD}/3d-models/Motor_ERM_LEADER_LCM1027A2445F.step"
 			(offset
-				(xyz 0 0 0)
+				(xyz 0 0 1.7)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz -90 0 90)
+				(xyz -90 -0 90)
 			)
 		)
 	)
@@ -3919,7 +3919,7 @@
 			)
 		)
 	)
-	(gr_text "module v0.1.0"
+	(gr_text "module v1.0.0"
 		(at 122.4 117 0)
 		(layer "F.SilkS")
 		(uuid "0d999ad6-af10-46cc-923c-e31f57cfd989")
