@@ -2,7 +2,7 @@
 
 KiCad 10 project for the **chilichip utility module**: a small add-on board for the [chilichip console](https://github.com/chili-chip/vgc-zero-hardware) with a gyroscope/accelerometer, a vibration motor and a real-time clock. Everything sits on one I²C bus, so the module needs only the console's three free GPIOs.
 
-Status: **schematic drawn** (ERC clean apart from three expected warnings, listed below). PCB layout not started.
+Status: **schematic drawn, all footprints assigned** (ERC clean apart from two expected warnings, listed below). PCB layout not started.
 
 ## Parts
 
@@ -53,18 +53,24 @@ GP0/GP1 are also the RP2350's default UART0 pins, so with this module fitted, us
 
 ## ERC
 
-The schematic has three ERC warnings, all expected:
+The schematic has two ERC warnings, both expected: **"Bidirectional and Power output"** on the IMU's SA0 and SDx pins, which are bidirectional and tied straight to GND (SA0 selects the I²C address; SDx/SCx are the unused auxiliary I²C master).
 
-- **Two "Bidirectional and Power output"**: the IMU's SA0 and SDx pins are bidirectional and tied straight to GND (SA0 selects the I²C address; SDx/SCx are the unused auxiliary I²C master).
-- **One "Open collector and Output"**: on INT, KiCad's symbol types the IMU's INT1 as a push-pull output. Firmware sets it to open-drain, so it can share the line with the RTC's open-drain ~INT.
+In the project's `LSM6DS3TR-C` symbol, INT1/INT2 are typed open-collector rather than KiCad's push-pull output, because this design always sets them to open-drain so they can share the INT line with the RTC.
 
 ## Still to decide before layout
 
-- **J1 footprint:** castellated edge pads like the audio and buttons modules, or a header. The console also needs a matching footprint and a spot on the board.
-- **M1 footprint:** depends on how the motor is mounted (wire leads to two pads, or stuck down with an FPC tail).
-- **BT1 footprint:** KiCad has none for the MYOUNG holder, so it needs drawing from its datasheet.
+- **Console side:** the console needs a matching footprint (SMD lands for the five castellations) and a spot on the board.
 - **IMU SDx/SCx tie-off:** I tied them to GND, which is what secondary pin summaries say ("connect to VDDIO or GND" when unused). Check this against ST's LSM6DS3TR-C datasheet (DocID030071) pin table.
 - **Power budget:** the motor draws about 60–80 mA at 3 V while running, from the Pico's 3.3 V output (budget about 300 mA).
+
+## Footprints
+
+| Ref | Footprint | Source |
+|-----|-----------|--------|
+| J1 | `Castellated_1x05_P2.54mm` | Same castellated pads as the audio and buttons modules: 1.0 mm drill, 2.4 × 1.6 mm, on the board edge |
+| BT1 | `BatteryHolder_MYOUNG_MY-1220-03_CR1220` | MYOUNG drawing MY-CP-0210 and LCSC's EasyEDA footprint: two + tabs 3.90 × 4.18 mm at ±7.9 mm, round 7.0 mm − pad under the cell (no paste) |
+| M1 | `Motor_ERM_D10mm_WireLeads` | LEADER LCM1027A2445F drawing: 10 mm body (stuck down with its adhesive tape), AWG 34 leads into two 0.6 mm plated holes, + (red) and − (blue). Hand-soldered after assembly |
+| U1–U3, passives | KiCad standard library | |
 
 ## Files
 
@@ -72,3 +78,4 @@ The schematic has three ERC warnings, all expected:
 |------|----------|
 | `chili-utility-module.kicad_sch` | Schematic |
 | `chili-utility-module.kicad_sym`, `sym-lib-table` | Project symbols: LSM6DS3TR-C, RV-3028-C7, DRV2605L, Motor_ERM. Copied from KiCad 10's library, with manufacturer, part number and LCSC fields added |
+| `chili-utility-module.pretty/`, `fp-lib-table` | Project footprints: J1 castellated 1×05, BT1 MYOUNG CR1220 holder, M1 coin motor |

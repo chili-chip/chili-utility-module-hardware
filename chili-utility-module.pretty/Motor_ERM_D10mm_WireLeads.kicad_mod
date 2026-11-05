@@ -1,0 +1,159 @@
+(footprint "Motor_ERM_D10mm_WireLeads"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Coin ERM vibration motor, 10 mm dia x 2.7 mm, stuck down with its adhesive tape; wire leads soldered into pad 1 (+, red) and pad 2 (-, blue). LEADER LCM1027A2445F (LCSC C2759984)")
+	(tags "vibration motor ERM coin 1027 haptic")
+	(property "Reference" "REF**"
+		(at 0 -6.2 0)
+		(layer "F.SilkS")
+		(uuid "c98c5c23-97cc-4656-a652-d1057d4094ef")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Motor_ERM_D10mm_WireLeads"
+		(at 0 6.4 0)
+		(layer "F.Fab")
+		(uuid "79c41ca1-09c7-469f-949c-34cb3e2d40fc")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e41d8d09-8f2b-4a2b-b3b4-908740b9321e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Coin ERM vibration motor, 10 mm dia x 2.7 mm, stuck down with its adhesive tape; wire leads soldered into pad 1 (+, red) and pad 2 (-, blue). LEADER LCM1027A2445F (LCSC C2759984)"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "46467267-8599-4a1a-8639-93bd3437add1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole exclude_from_pos_files)
+	(duplicate_pad_numbers_are_jumpers no)
+	(pad "1" thru_hole circle
+		(at 8.5 -0.635)
+		(size 1.1 1.1)
+		(drill 0.6)
+		(layers "*.Cu" "*.Mask")
+		(uuid "810c5a4d-3a25-4580-aa6b-7bf6299209d5")
+	)
+	(pad "2" thru_hole circle
+		(at 8.5 0.635)
+		(size 1.1 1.1)
+		(drill 0.6)
+		(layers "*.Cu" "*.Mask")
+		(uuid "f8d6c9ac-2d48-4670-b6b0-20a0e1e9c1de")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 5 0)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "b76428e2-0cc7-436a-be9c-6fb4a2e6da85")
+	)
+	(fp_rect
+		(start 4.6 -1.5)
+		(end 6.8 1.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "b168151c-0b38-41c6-8e12-ea76d4452111")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 5.12 0)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "b71d0cb7-dc7a-4934-87a9-738dca02edf4")
+	)
+	(fp_text user "+"
+		(at 10 -0.635 0)
+		(layer "F.SilkS")
+		(uuid "8b5894db-48d4-43b0-9d0f-2be39aa47ac1")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(fp_text user "-"
+		(at 10 0.635 0)
+		(layer "F.SilkS")
+		(uuid "845e5d23-9856-42c5-b723-fc0447d251e3")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(fp_circle
+		(center 0 0)
+		(end 5.25 0)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "37ecbdca-5be0-4fc1-81d6-7dccefe716c9")
+	)
+	(fp_rect
+		(start 4.5 -1.6)
+		(end 9.4 1.6)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "fac8aae5-6265-48bd-b641-5f66a8a1cc5f")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "8293c3a6-30af-4981-9f35-a6b859a8d1ef")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(embedded_fonts no)
+)

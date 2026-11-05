@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "chili-utility-module") (type "KiCad") (uri "${KIPRJMOD}/chili-utility-module.pretty") (options "") (descr "Utility module footprints"))
+)
