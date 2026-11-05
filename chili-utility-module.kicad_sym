@@ -127,7 +127,7 @@
 			)
 		)
 		(symbol "LSM6DS3TR-C_1_1"
-			(pin bidirectional line
+			(pin passive line
 				(at -15.24 7.62 0)
 				(length 2.54)
 				(name "SDO/SA0"
@@ -145,7 +145,7 @@
 					)
 				)
 			)
-			(pin bidirectional line
+			(pin passive line
 				(at -15.24 5.08 0)
 				(length 2.54)
 				(name "SDX"
