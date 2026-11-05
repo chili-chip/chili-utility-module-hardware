@@ -8,7 +8,7 @@
 	(property "Reference" "REF**"
 		(at 0 -6.3 0)
 		(layer "F.SilkS")
-		(uuid "b14b0971-f4c3-460a-9803-c60f31bf257b")
+		(uuid "ba93f335-8781-40de-b85b-cf395de077dc")
 		(effects
 			(font
 				(size 1 1)
@@ -19,7 +19,7 @@
 	(property "Value" "BatteryHolder_MYOUNG_MY-1220-03_CR1220"
 		(at 0 8.2 0)
 		(layer "F.Fab")
-		(uuid "ba3b2162-c303-42f8-af5f-a952c6ac318a")
+		(uuid "5ade9e6d-3e7d-4ba1-b11f-34bea8f2fea9")
 		(effects
 			(font
 				(size 1 1)
@@ -31,7 +31,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "2b4ad108-7a74-4281-aa7d-9a0f07ddcc3e")
+		(uuid "186c5c0f-3aee-4814-9405-21230b71d0bb")
 		(effects
 			(font
 				(size 1 1)
@@ -43,7 +43,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "d76004eb-7398-40e8-8694-489338e1e3b5")
+		(uuid "5ad3073e-09fc-48ac-9d82-8e24e48c1925")
 		(effects
 			(font
 				(size 1 1)
@@ -57,19 +57,19 @@
 		(at -7.9 0)
 		(size 3.9 4.18)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "781d3768-ea29-445d-b315-90d23a21ee20")
+		(uuid "38dd1d3a-82d7-465d-88c0-50fe3d80b35a")
 	)
 	(pad "1" smd rect
 		(at 7.9 0)
 		(size 3.9 4.18)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "7f269007-bf13-4121-9d73-63bf90647e38")
+		(uuid "8c784d0d-4c89-4845-9bf9-b159fadf7e5e")
 	)
 	(pad "2" smd circle
 		(at 0 0)
 		(size 7 7)
 		(layers "F.Cu" "F.Mask")
-		(uuid "98bdedf7-06ed-4511-a68d-05e93c33ba11")
+		(uuid "5cd9ffa6-fae9-4986-b019-dc3ce6f522ce")
 	)
 	(fp_line
 		(start 6.5 2.32)
@@ -79,7 +79,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "e24edf41-ce38-4425-9e38-2fd9a0695122")
+		(uuid "bcb96603-47d3-4a8d-bc14-65ea9d2552a3")
 	)
 	(fp_line
 		(start 6.5 4)
@@ -89,7 +89,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "0f49de93-f522-47a7-a79b-8bd0f0b26767")
+		(uuid "6e381870-f0fe-4f07-89f1-d5155d8f633b")
 	)
 	(fp_line
 		(start 3.6 6.9)
@@ -99,7 +99,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "554d7da3-dd06-45f4-a96d-f14fdc753cf8")
+		(uuid "9400f130-7b2b-4f5f-8984-b74c0829f839")
 	)
 	(fp_line
 		(start -3.6 6.9)
@@ -109,7 +109,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "40f314e6-da67-44c0-9555-f0177d9afc6a")
+		(uuid "e1310ca5-8044-4dc1-8e1a-cb21820d57ae")
 	)
 	(fp_line
 		(start -6.5 4)
@@ -119,7 +119,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "7bed0692-7d77-4d04-a300-e123714b87c2")
+		(uuid "305f2242-36f2-4b10-99b2-a36de8f2d318")
 	)
 	(fp_line
 		(start -6.5 -2.32)
@@ -129,7 +129,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "f4c72c0a-4b0d-43bf-b752-cfc65f9ca162")
+		(uuid "828dcc51-ba73-4587-a3c4-4dc58166ee24")
 	)
 	(fp_line
 		(start -6.5 -5.1)
@@ -139,7 +139,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "b2ee50bb-da55-4073-8682-05f8a0aadd36")
+		(uuid "58a87fab-b9e2-47c2-a048-441954961f8c")
 	)
 	(fp_line
 		(start 6.5 -5.1)
@@ -149,7 +149,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "efe2fe1a-69aa-4e07-8eba-c09a1132678e")
+		(uuid "c5cdd351-b4d1-489f-98dd-8a41e1c46c5f")
 	)
 	(fp_rect
 		(start -6.5 -5.1)
@@ -160,7 +160,7 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "e6f9ba9c-ea76-4e31-ba75-69a86db1b3c5")
+		(uuid "07bac9f6-c0ee-44bf-8425-1d47227dd202")
 	)
 	(fp_circle
 		(center 0 0)
@@ -171,12 +171,12 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "631188aa-1e5d-42ce-b599-18888dad3ca0")
+		(uuid "6cc83bea-3447-495a-baf2-838eaefda8d2")
 	)
 	(fp_text user "+"
 		(at -7.9 -3.2 0)
 		(layer "F.SilkS")
-		(uuid "5cd323b5-6af6-40c9-8915-f605654fad59")
+		(uuid "2f7fa45e-2a87-48db-a982-23d9e50a8cfe")
 		(effects
 			(font
 				(size 1 1)
@@ -187,7 +187,7 @@
 	(fp_text user "+"
 		(at 7.9 -3.2 0)
 		(layer "F.SilkS")
-		(uuid "ec8e4321-a52d-4a6c-a572-3a390afd7c31")
+		(uuid "ab1b41aa-8b57-49c8-979d-8eb80768813e")
 		(effects
 			(font
 				(size 1 1)
@@ -204,12 +204,12 @@
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "efebe85c-1aab-4dac-ad2d-a7437f31333a")
+		(uuid "1c0d69eb-029e-41df-8514-5fcb8f613437")
 	)
 	(fp_text user "${REFERENCE}"
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "e63adaa4-fef0-4fe2-888f-e24ba3092ef4")
+		(uuid "7f99568a-3276-4598-8d06-af964ae97cbc")
 		(effects
 			(font
 				(size 0.8 0.8)
