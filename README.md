@@ -2,7 +2,7 @@
 
 KiCad 10 project for the **chilichip utility module**: a small add-on board for the [chilichip console](https://github.com/chili-chip/vgc-zero-hardware) with a gyroscope/accelerometer, a vibration motor and a real-time clock. Everything sits on one I²C bus, so the module needs only the console's three free GPIOs.
 
-Status: **schematic drawn, all footprints assigned** (ERC clean apart from two expected warnings, listed below). PCB layout not started.
+Status: **schematic and PCB done.** The board is routed, DRC is clean (0 violations, 0 unconnected, matches the schematic), and ERC is clean apart from two expected warnings, listed below.
 
 ## Parts
 
@@ -71,6 +71,19 @@ In the project's `LSM6DS3TR-C` symbol, INT1/INT2 are typed open-collector rather
 | BT1 | `BatteryHolder_MYOUNG_MY-1220-03_CR1220` | MYOUNG drawing MY-CP-0210 and LCSC's EasyEDA footprint: two + tabs 3.90 × 4.18 mm at ±7.9 mm, round 7.0 mm − pad under the cell (no paste) |
 | M1 | `Motor_ERM_D10mm_WireLeads` | LEADER LCM1027A2445F drawing: 10 mm body (stuck down with its adhesive tape), AWG 34 leads into two 0.6 mm plated holes, + (red) and − (blue). Hand-soldered after assembly |
 | U1–U3, passives | KiCad standard library | |
+
+## PCB
+
+- **Board:** 30 × 32 mm, 2 layers, all parts on the top side. The bottom sits flat on the console once J1's castellations are soldered.
+- **Placement:**
+  - CR1220 holder along the top edge.
+  - IMU and RTC under it. The IMU is as far as possible from the motor, whose vibration would otherwise add noise to the gyro.
+  - I²C/INT pull-ups level with their J1 castellations.
+  - Haptic driver beside the motor's lead pads, and the motor in the bottom-right corner.
+- **Coin cell:** the cell's underside is its − terminal. The BT1 footprint carries a no-tracks/no-vias keepout over it, so only the GND pour sits under the cell. Its two + tabs are an internal jumper (the holder's metal joins them), so no track crosses under the cell.
+- **Ground:** GND pour on both layers. SMD pads connect solid, through-hole pads through thermal spokes, and J1's GND castellation solid.
+- **Routing:** autorouted with Freerouting, with VBAT routed around the cell by hand. Tracks are 0.2 mm (0.15 mm at the fine-pitch pads), with 0.15 mm clearance; JLCPCB's minimum is 0.127 mm.
+- **Silkscreen:** J1 pin labels and the module name/version. Reference designators are on the fab layer, because the 0402 parts are too dense for silkscreen ones.
 
 ## Files
 

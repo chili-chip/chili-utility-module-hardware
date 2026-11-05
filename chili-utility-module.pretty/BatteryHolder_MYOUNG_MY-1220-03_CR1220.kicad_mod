@@ -52,7 +52,7 @@
 		)
 	)
 	(attr smd)
-	(duplicate_pad_numbers_are_jumpers no)
+	(duplicate_pad_numbers_are_jumpers yes)
 	(pad "1" smd rect
 		(at -7.9 0)
 		(size 3.9 4.18)
@@ -214,6 +214,37 @@
 			(font
 				(size 0.8 0.8)
 				(thickness 0.12)
+			)
+		)
+	)
+	(zone
+		(layers "F.Cu" "B.Cu")
+		(uuid "07bfcf5d-ed32-4ec9-a898-2ec375cbec1d")
+		(name "CR1220 cell: no tracks or vias under the - terminal")
+		(hatch edge 0.5)
+		(connect_pads
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(keepout
+			(tracks not_allowed)
+			(vias not_allowed)
+			(pads allowed)
+			(copperpour allowed)
+			(footprints allowed)
+		)
+		(placement
+			(enabled no)
+			(sheetname "")
+		)
+		(fill
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 0)
+		)
+		(polygon
+			(pts
+				(xy 6.75 0) (xy 6.647452 1.172125) (xy 6.342925 2.308636) (xy 5.845671 3.375) (xy 5.1708 4.338816) (xy 4.338816 5.1708) (xy 3.375 5.845671) (xy 2.308636 6.342925) (xy 1.172125 6.647452) (xy 0 6.75) (xy -1.172125 6.647452) (xy -2.308636 6.342925) (xy -3.375 5.845671) (xy -4.338816 5.1708) (xy -5.1708 4.338816) (xy -5.845671 3.375) (xy -6.342925 2.308636) (xy -6.647452 1.172125) (xy -6.75 0) (xy -6.647452 -1.172125) (xy -6.342925 -2.308636) (xy -5.845671 -3.375) (xy -5.1708 -4.338816) (xy -4.338816 -5.1708) (xy -3.375 -5.845671) (xy -2.308636 -6.342925) (xy -1.172125 -6.647452) (xy 0 -6.75) (xy 1.172125 -6.647452) (xy 2.308636 -6.342925) (xy 3.375 -5.845671) (xy 4.338816 -5.1708) (xy 5.1708 -4.338816) (xy 5.845671 -3.375) (xy 6.342925 -2.308636) (xy 6.647452 -1.172125)
 			)
 		)
 	)
