@@ -249,4 +249,15 @@
 		)
 	)
 	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d-models/BatteryHolder_MYOUNG_MY-1220-03.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
 )

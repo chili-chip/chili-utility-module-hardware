@@ -70,7 +70,10 @@ In the project's `LSM6DS3TR-C` symbol, INT1/INT2 are typed open-collector rather
 | J1 | `Castellated_1x05_P2.54mm` | Same castellated pads as the audio and buttons modules: 1.0 mm drill, 2.4 × 1.6 mm, on the board edge |
 | BT1 | `BatteryHolder_MYOUNG_MY-1220-03_CR1220` | MYOUNG drawing MY-CP-0210 and LCSC's EasyEDA footprint: two + tabs 3.90 × 4.18 mm at ±7.9 mm, round 7.0 mm − pad under the cell (no paste) |
 | M1 | `Motor_ERM_D10mm_WireLeads` | LEADER LCM1027A2445F drawing: 10 mm body (stuck down with its adhesive tape), AWG 34 leads into two 0.6 mm plated holes, + (red) and − (blue). Hand-soldered after assembly |
-| U1–U3, passives | KiCad standard library | |
+| U2 | `MicroCrystal_C7_SON-8_1.5x3.2mm_P0.9mm` | Copy of KiCad's footprint, because KiCad 10 doesn't ship the 3D model it references |
+| U1, U3, passives | KiCad standard library | |
+
+**3D models:** U1, U3 and the passives use KiCad's library models. BT1, M1 and U2 use LCSC's STEP models (from their EasyEDA library), stored in `3d-models/`. The motor model's red (+) lead points at the − pad; it's only cosmetic, since the real leads are long and flexible and an ERM vibrates the same in either direction. Follow the silkscreen +/− marks when soldering.
 
 ## PCB
 
@@ -85,10 +88,25 @@ In the project's `LSM6DS3TR-C` symbol, INT1/INT2 are typed open-collector rather
 - **Routing:** autorouted with Freerouting, with VBAT routed around the cell by hand. Tracks are 0.2 mm (0.15 mm at the fine-pitch pads), with 0.15 mm clearance; JLCPCB's minimum is 0.127 mm.
 - **Silkscreen:** J1 pin labels and the module name/version. Reference designators are on the fab layer, because the 0402 parts are too dense for silkscreen ones.
 
+## Ordering from JLCPCB
+
+Every tagged release has `chili-utility-module-<version>-gerbers.zip`, `-bom.csv` and `-cpl.csv` attached. Run `scripts/export-jlcpcb.sh` to build them locally into `production/`.
+
+1. Upload the gerber zip on [jlcpcb.com](https://jlcpcb.com/) and select **2 layers, 1.6 mm, Castellated Holes: Yes**.
+2. Turn on **PCB Assembly** (top side) and upload the BOM and CPL.
+3. In the placement preview, check pin 1 of U1–U3 and the orientation of the BT1 holder.
+4. The motor (M1) isn't in the JLCPCB BOM, because it has wire leads. Stick it down with its adhesive and solder the leads by hand: red to +, blue to −.
+
+CI runs ERC, DRC and the export on every push and pull request. A `v*` tag publishes a release with the files attached.
+
 ## Files
 
 | Path | Contents |
 |------|----------|
 | `chili-utility-module.kicad_sch` | Schematic |
 | `chili-utility-module.kicad_sym`, `sym-lib-table` | Project symbols: LSM6DS3TR-C, RV-3028-C7, DRV2605L, Motor_ERM. Copied from KiCad 10's library, with manufacturer, part number and LCSC fields added |
-| `chili-utility-module.pretty/`, `fp-lib-table` | Project footprints: J1 castellated 1×05, BT1 MYOUNG CR1220 holder, M1 coin motor |
+| `chili-utility-module.pretty/`, `fp-lib-table` | Project footprints: J1 castellated 1×05, BT1 MYOUNG CR1220 holder, M1 coin motor, U2 SON-8 |
+| `3d-models/` | STEP models for BT1, M1 and U2 |
+| `chili-utility-module.kicad_pcb` | PCB |
+| `scripts/export-jlcpcb.sh` | Builds the JLCPCB gerber zip, BOM and CPL |
+| `.github/workflows/main.yml` | CI and release workflow |

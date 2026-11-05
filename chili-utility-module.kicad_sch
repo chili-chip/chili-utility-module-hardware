@@ -1739,7 +1739,7 @@
 					)
 				)
 			)
-			(property "Footprint" "Package_SON:MicroCrystal_C7_SON-8_1.5x3.2mm_P0.9mm"
+			(property "Footprint" "chili-utility-module:MicroCrystal_C7_SON-8_1.5x3.2mm_P0.9mm"
 				(at 25.4 -8.89 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -6831,7 +6831,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SON:MicroCrystal_C7_SON-8_1.5x3.2mm_P0.9mm"
+		(property "Footprint" "chili-utility-module:MicroCrystal_C7_SON-8_1.5x3.2mm_P0.9mm"
 			(at 237.49 69.85 0)
 			(hide yes)
 			(show_name no)

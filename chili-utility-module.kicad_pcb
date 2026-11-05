@@ -1139,7 +1139,7 @@
 			)
 		)
 	)
-	(footprint "Package_SON:MicroCrystal_C7_SON-8_1.5x3.2mm_P0.9mm"
+	(footprint "chili-utility-module:MicroCrystal_C7_SON-8_1.5x3.2mm_P0.9mm"
 		(layer "F.Cu")
 		(uuid "30b63b35-6a88-412e-bc03-2fa8f4bed387")
 		(at 112.4 117.6)
@@ -1373,7 +1373,7 @@
 			(uuid "48d389ef-1b3c-4115-8395-139b922534d8")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Package_SON.3dshapes/MicroCrystal_C7_SON-8_1.5x3.2mm_P0.9mm.step"
+		(model "${KIPRJMOD}/3d-models/MicroCrystal_RV-3028-C7_C7-SON-8.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -1381,7 +1381,7 @@
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz 0 0 90)
 			)
 		)
 	)
@@ -2687,6 +2687,17 @@
 			)
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/3d-models/BatteryHolder_MYOUNG_MY-1220-03.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Capacitor_SMD:C_0402_1005Metric"
 		(layer "F.Cu")
@@ -3443,6 +3454,17 @@
 			(uuid "00921b8e-5137-4199-ab8a-d0186805239c")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/3d-models/Motor_ERM_LEADER_LCM1027A2445F.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 0 90)
+			)
+		)
 	)
 	(footprint "Capacitor_SMD:C_0402_1005Metric"
 		(layer "F.Cu")
