@@ -1,12 +1,12 @@
-(footprint "Castellated_1x05_P2.54mm"
+(footprint "Castellated_1x06_P2.54mm"
 	(version 20260206)
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
-	(descr "Castellated (plated half-hole) edge pads, 1x05, 2.54mm pitch, 1mm drill. Place with the pad centres on the board edge; board interior is +X.")
+	(descr "Castellated (plated half-hole) edge pads, 1x06, 2.54mm pitch, 1mm drill. Place with the pad centres on the board edge; board interior is +X.")
 	(tags "castellated castellation half-hole edge module 2.54mm")
 	(property "Reference" "REF**"
-		(at 2.5 -5.08 90)
+		(at 2.5 -6.35 90)
 		(layer "F.Fab")
 		(uuid "0ee20a5f-b45b-4c87-95ed-d6be80b99ab6")
 		(effects
@@ -16,8 +16,8 @@
 			)
 		)
 	)
-	(property "Value" "Castellated_1x05_P2.54mm"
-		(at -2 -5.08 90)
+	(property "Value" "Castellated_1x06_P2.54mm"
+		(at -2 -6.35 90)
 		(layer "F.Fab")
 		(uuid "11af6954-8cae-4792-bc4c-25215eacafd2")
 		(effects
@@ -39,7 +39,7 @@
 			)
 		)
 	)
-	(property "Description" "Castellated (plated half-hole) edge pads, 1x05, 2.54mm pitch, 1mm drill. Place with the pad centres on the board edge; board interior is +X."
+	(property "Description" "Castellated (plated half-hole) edge pads, 1x06, 2.54mm pitch, 1mm drill. Place with the pad centres on the board edge; board interior is +X."
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
@@ -103,9 +103,19 @@
 		(roundrect_rratio 0.25)
 		(uuid "5eefeafb-a5f6-4e17-a8b1-f6d61bc8cc8f")
 	)
+	(pad "6" thru_hole roundrect
+		(at 0 -12.7)
+		(size 2.4 1.6)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(property pad_prop_castellated)
+		(remove_unused_layers no)
+		(roundrect_rratio 0.25)
+		(uuid "08e06f02-2496-4c52-8302-b1432ddebf76")
+	)
 	(fp_line
 		(start 0 1.27)
-		(end 0 -11.43)
+		(end 0 -13.97)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -126,7 +136,7 @@
 	)
 	(fp_rect
 		(start -1.45 1.05)
-		(end 1.45 -11.21)
+		(end 1.45 -13.75)
 		(stroke
 			(width 0.05)
 			(type default)
