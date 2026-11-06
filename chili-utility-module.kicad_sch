@@ -6,13 +6,13 @@
 	(paper "A4")
 	(title_block
 		(title "CHILICHIP UTILITY MODULE")
-		(date "2026-11-05")
-		(rev "v1.0.0")
+		(date "2026-11-06")
+		(rev "v2.0.0")
 		(comment 3 "Company: chilichip")
 		(comment 4 "Author: Kacper Akdag-Ochnik")
 	)
 	(lib_symbols
-		(symbol "Connector_Generic:Conn_01x05"
+		(symbol "Connector_Generic:Conn_01x06"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -32,8 +32,8 @@
 					)
 				)
 			)
-			(property "Value" "Conn_01x05"
-				(at 0 -7.62 0)
+			(property "Value" "Conn_01x06"
+				(at 0 -10.16 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -64,7 +64,7 @@
 					)
 				)
 			)
-			(property "Description" "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -97,10 +97,10 @@
 					)
 				)
 			)
-			(symbol "Conn_01x05_1_1"
+			(symbol "Conn_01x06_1_1"
 				(rectangle
 					(start -1.27 6.35)
-					(end 1.27 -6.35)
+					(end 1.27 -8.89)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -156,6 +156,17 @@
 				(rectangle
 					(start -1.27 -4.953)
 					(end 0 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -7.493)
+					(end 0 -7.747)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -254,223 +265,17 @@
 						)
 					)
 				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Device:Battery_Cell"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "BT"
-				(at 2.54 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "Battery_Cell"
-				(at 2.54 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 1.524 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 1.524 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Single-cell battery"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Sim.Device" "V"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Sim.Type" "DC"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Sim.Pins" "1=+ 2=-"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "battery cell"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Battery_Cell_0_1"
-				(rectangle
-					(start -2.286 1.778)
-					(end 2.286 1.524)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start -1.524 1.016)
-					(end 1.524 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 1.778) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0.762) (xy 0 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 3.048) (xy 1.778 3.048)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 3.556) (xy 1.27 2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Battery_Cell_1_1"
 				(pin passive line
-					(at 0 5.08 270)
-					(length 2.54)
-					(name "+"
+					(at -5.08 -7.62 0)
+					(length 3.81)
+					(name "Pin_6"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -2.54 90)
-					(length 2.54)
-					(name "-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
+					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2369,7 +2174,7 @@
 		)
 		(uuid "292de470-9985-48f2-ae8f-b7da81a56679")
 	)
-	(text "CONSOLE CONNECTOR\n3V3 from the Pico. SDA/SCL = GP0/GP1 (I2C0). INT = GP2."
+	(text "CONSOLE CONNECTOR\n3V3 from the RP2350-Plus. SDA/SCL = GP0/GP1 (I2C0). INT = GP2.\nVBAT = the console's VSYS: always on while its LiPo is fitted, about 3.4-4.95 V."
 		(exclude_from_sim no)
 		(at 25.4 25.4 0)
 		(effects
@@ -2391,7 +2196,7 @@
 		)
 		(uuid "537fb833-27ab-479c-97b1-2cce03e32cf5")
 	)
-	(text "HAPTICS\nDRV2605L, I2C address 0x5A. ERM mode, effects triggered over I2C.\nRun auto-calibration once for the motor.\nREG: 1 uF to GND. VDD: 1 uF + 100 nF. Motor: about 60-80 mA at 3 V."
+	(text "HAPTICS\nDRV2605L, I2C address 0x5A. ERM mode, effects triggered over I2C.\nRun auto-calibration once for the motor.\nREG: 1 uF to GND. VDD: 1 uF + 100 nF. Motor: Vybronics VZ43FC1B SMD ERM, about 77 mA at 3 V.\nIts leads are swapped (OUT+ to motor -) to keep the PCB traces apart:\nan ERM vibrates the same in either direction."
 		(exclude_from_sim no)
 		(at 19.05 124.46 0)
 		(effects
@@ -2413,7 +2218,7 @@
 		)
 		(uuid "b5dc7348-84c6-4f79-8b95-c9a1ecc3130c")
 	)
-	(text "REAL-TIME CLOCK\nRV-3028-C7, I2C address 0x52. Crystal built in.\nFirmware: enable backup switchover (BSM = 11, LSM) and store it in EEPROM;\nkeep the trickle charger off (TCE = 0, default) with a primary cell.\nCLKOUT is on by default: turn it off to save current."
+	(text "REAL-TIME CLOCK\nRV-3028-C7, I2C address 0x52. Crystal built in.\nFirmware: enable backup switchover (BSM = 11, LSM) and store it in EEPROM;\nkeep the trickle charger off (TCE = 0, default): VBACKUP is the console's VSYS.\nCLKOUT is on by default: turn it off to save current."
 		(exclude_from_sim no)
 		(at 186.69 20.32 0)
 		(effects
@@ -2646,16 +2451,6 @@
 			(type default)
 		)
 		(uuid "394fe526-4b69-4941-a527-c766b5625bd4")
-	)
-	(wire
-		(pts
-			(xy 234.95 91.44) (xy 234.95 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3af0b080-0305-48e8-8521-17c9dd9ff42a")
 	)
 	(wire
 		(pts
@@ -3159,13 +2954,33 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 99.06) (xy 234.95 101.6)
+			(xy 40.64 68.58) (xy 38.1 68.58)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ffda7c71-cf54-4ba7-8b4f-f295640fd99c")
+		(uuid "adb02f49-2a98-407d-a246-cf8259118cd9")
+	)
+	(wire
+		(pts
+			(xy 38.1 68.58) (xy 38.1 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "73f54545-4938-4876-b38a-be174bcf29cd")
+	)
+	(label "VBAT"
+		(at 38.1 73.66 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "fc37fa79-e720-4294-a50e-303ade5e1225")
 	)
 	(label "VBAT"
 		(at 219.71 43.18 0)
@@ -3187,7 +3002,7 @@
 		)
 		(uuid "2899df8e-28f8-4302-8b61-fe6b82488081")
 	)
-	(label "MOT+"
+	(label "MOT-"
 		(at 140.97 154.94 90)
 		(effects
 			(font
@@ -3337,16 +3152,6 @@
 		)
 		(uuid "ba2d8390-b12a-455f-95cb-cf714d707c96")
 	)
-	(label "VBAT"
-		(at 234.95 88.9 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c275fe64-aec2-4fab-a5c2-d10db3aa06f8")
-	)
 	(label "SDA"
 		(at 35.56 58.42 180)
 		(effects
@@ -3367,7 +3172,7 @@
 		)
 		(uuid "d0c90443-641a-486e-b9ae-21318a582b51")
 	)
-	(label "MOT-"
+	(label "MOT+"
 		(at 140.97 172.72 270)
 		(effects
 			(font
@@ -3687,153 +3492,6 @@
 			(project "chili-utility-module"
 				(path "/c1e45e85-5292-40ab-a8ea-9fb439b032d9"
 					(reference "U1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Battery_Cell")
-		(at 234.95 96.52 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "18a8b040-0d32-4922-a2f8-1366bb78d3f4")
-		(property "Reference" "BT1"
-			(at 237.49 93.98 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "CR1220"
-			(at 237.49 96.52 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "chili-utility-module:BatteryHolder_MYOUNG_MY-1220-03_CR1220"
-			(at 234.95 94.996 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 234.95 94.996 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "CR1220 coin cell holder, SMD"
-			(at 234.95 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "V"
-			(at 234.95 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Type" "DC"
-			(at 234.95 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=+ 2=-"
-			(at 234.95 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "MY-1220-03-R"
-			(at 234.95 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "MYOUNG"
-			(at 234.95 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C964819"
-			(at 234.95 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "5d90cb52-2300-4207-a6b1-43b046824434")
-		)
-		(pin "2"
-			(uuid "84347a05-9163-4964-8426-49fd18b353c0")
-		)
-		(instances
-			(project "chili-utility-module"
-				(path "/c1e45e85-5292-40ab-a8ea-9fb439b032d9"
-					(reference "BT1")
 					(unit 1)
 				)
 			)
@@ -5044,7 +4702,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x05")
+		(lib_id "Connector_Generic:Conn_01x06")
 		(at 45.72 60.96 0)
 		(unit 1)
 		(body_style 1)
@@ -5065,7 +4723,7 @@
 			)
 		)
 		(property "Value" "Console"
-			(at 45.72 68.58 0)
+			(at 45.72 73.66 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5074,7 +4732,7 @@
 				)
 			)
 		)
-		(property "Footprint" "chili-utility-module:Castellated_1x05_P2.54mm"
+		(property "Footprint" "chili-utility-module:Castellated_1x06_P2.54mm"
 			(at 45.72 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -5121,6 +4779,9 @@
 		)
 		(pin "5"
 			(uuid "9eaf6ab7-a389-4250-9d6e-23d84a3da744")
+		)
+		(pin "6"
+			(uuid "b171e596-0abe-4242-99e3-1da5fed9f321")
 		)
 		(instances
 			(project "chili-utility-module"
@@ -5683,7 +5344,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "LCM1027A2445F"
+		(property "Value" "VZ43FC1B5640007L"
 			(at 143.51 167.64 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5694,7 +5355,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" "chili-utility-module:Motor_ERM_D10mm_WireLeads"
+		(property "Footprint" "chili-utility-module:Motor_ERM_SMD_Vybronics_VZ43FC1B"
 			(at 140.97 164.846 0)
 			(hide yes)
 			(show_name no)
@@ -5705,7 +5366,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.vybronics.com/wp-content/uploads/datasheet-files/Vybronics-VZ43FC1B5640007L-datasheet.pdf"
 			(at 140.97 164.846 0)
 			(hide yes)
 			(show_name no)
@@ -5716,7 +5377,7 @@
 				)
 			)
 		)
-		(property "Description" "Coin ERM vibration motor, 10 x 2.7 mm, 3 V, 10000 rpm"
+		(property "Description" "SMD cylindrical ERM vibration motor, 4.3 x 12 mm, reflow-solderable, 3 V, 77 mA typ, 10000 rpm"
 			(at 140.97 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -5727,7 +5388,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C2759984"
+		(property "LCSC" ""
 			(at 140.97 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -5738,7 +5399,7 @@
 				)
 			)
 		)
-		(property "MPN" "LCM1027A2445F"
+		(property "MPN" "VZ43FC1B5640007L"
 			(at 140.97 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -5749,7 +5410,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "LEADER"
+		(property "Manufacturer" "Vybronics"
 			(at 140.97 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -6925,82 +6586,6 @@
 			(project "chili-utility-module"
 				(path "/c1e45e85-5292-40ab-a8ea-9fb439b032d9"
 					(reference "U2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 234.95 101.6 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files no)
-		(dnp no)
-		(uuid "b41ed3e5-5225-49e5-ae76-7990735d2334")
-		(property "Reference" "#PWR22"
-			(at 234.95 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 234.95 105.41 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 234.95 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 234.95 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 234.95 101.6 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "fd921ca4-447b-453b-8eb5-31735679ce60")
-		)
-		(instances
-			(project "chili-utility-module"
-				(path "/c1e45e85-5292-40ab-a8ea-9fb439b032d9"
-					(reference "#PWR22")
 					(unit 1)
 				)
 			)

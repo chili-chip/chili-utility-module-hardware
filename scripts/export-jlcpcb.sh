@@ -46,8 +46,8 @@ with open(sys.argv[1]) as src, open(sys.argv[2], "w", newline="") as dst:
                     "Top" if r["Side"] == "top" else "Bottom", f'{float(r["Rot"]) % 360:g}'])
 EOF
 
-# Keep only BOM lines JLCPCB places: parts left out of the CPL (the wire-lead motor M1)
-# are soldered by hand after assembly.
+# Keep only BOM lines JLCPCB places: parts left out of the CPL (hand-soldered parts;
+# none since v2, where the motor became SMD) are dropped.
 python3 - "$OUT/$PREFIX-$VERSION-bom.csv" "$OUT/$PREFIX-$VERSION-cpl.csv" <<'EOF'
 import csv, sys
 bom_path, cpl_path = sys.argv[1], sys.argv[2]
