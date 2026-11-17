@@ -7,6 +7,11 @@ on:
       - 'v*'    # Example: v0.0.1, v1.2.3
   pull_request:
 
+# Read-only by default; only the release job may write (it creates the release).
+# https://docs.github.com/en/actions/reference/security/secure-use#use-the-principle-of-least-privilege
+permissions:
+  contents: read
+
 env:
   SCH_FILE: chili-utility-module.kicad_sch
   PCB_FILE: chili-utility-module.kicad_pcb
@@ -22,10 +27,12 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
 
       - name: Run KiCad 10 Actions
-        uses: actions-for-kicad/kicad-actions@v2.7-k10.0.7
+        uses: actions-for-kicad/kicad-actions@ac5e6d742e3eef663cfc21cac30d37384d71fb7a # v2.7-k10.0.7
         with:
           schematic_file_name: ${{ env.SCH_FILE }}
           run_erc: true
@@ -45,19 +52,19 @@ jobs:
 
       # Upload artifacts for release job
       - name: Upload schematic PDF
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: schematic
           path: ${{ env.OUT_SCH_PDF }}
 
       - name: Upload gerbers
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: gerbers
           path: ${{ env.OUT_GERBERS_DIR }}
 
       - name: Upload PCB image
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: pcb-image
           path: ${{ env.OUT_PCB_IMG }}
@@ -72,50 +79,62 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
 
       - name: Install tools
         run: apt-get update && apt-get install -y --no-install-recommends zip python3
 
       - name: Export JLCPCB files
+        # Values come in through env, not ${{ }} inside the script, so a tag name
+        # cannot inject shell code.
+        # https://docs.github.com/en/actions/reference/security/secure-use#use-an-intermediate-environment-variable
+        env:
+          REF_TYPE: ${{ github.ref_type }}
+          REF_NAME: ${{ github.ref_name }}
+          SHA: ${{ github.sha }}
         run: |
-          if [ "${{ github.ref_type }}" = "tag" ]; then
-            VERSION="${{ github.ref_name }}"
+          if [ "$REF_TYPE" = "tag" ]; then
+            VERSION="$REF_NAME"
           else
-            VERSION="$(echo "${{ github.sha }}" | cut -c1-7)"
+            VERSION="$(echo "$SHA" | cut -c1-7)"
           fi
           scripts/export-jlcpcb.sh "$VERSION" production
 
       - name: Upload JLCPCB files
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: jlcpcb
           path: production/
 
   release:
-    permissions: write-all
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     if: startsWith(github.ref, 'refs/tags/')
     needs: [kicad-ci, jlcpcb]
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
 
       # Download artifacts from the build job
-      - uses: actions/download-artifact@v8
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
           name: schematic
           path: artifacts/schematic
-      - uses: actions/download-artifact@v8
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
           name: pcb-image
           path: artifacts/pcb-image
-      - uses: actions/download-artifact@v8
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
           name: gerbers
           path: artifacts/gerbers
-      - uses: actions/download-artifact@v8
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
           name: jlcpcb
           path: artifacts/jlcpcb
@@ -128,7 +147,7 @@ jobs:
 
       # Create GitHub Release and attach artifacts
       - name: Create Release & Upload Assets
-        uses: softprops/action-gh-release@v3
+        uses: softprops/action-gh-release@8a0cd651e5b2365bd640854a3fa5dfc70e4875f3 # v3.0.4
         with:
           files: |
             artifacts/schematic/schematic.pdf
